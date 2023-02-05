@@ -136,11 +136,11 @@ console.log(typeof(arrayVar))
  * 4. Вызовите функцию
  */
 
-function myFunc() {
+function myFunc1() {
     console.log("Yury")
 }
 
-myFunc()
+myFunc1()
 
 /** ЗАДАЧА 8 - Присваивание функции переменной
  *
@@ -155,9 +155,122 @@ myFunc()
  * 5. Результат вызовов функции выведите в консоль
  */
 
-const myFunc = function (name) {
+const myFunc2 = function (name) {
     return `Привет, ${name}`
 }
 
-console.log(myFunc('Yury'))
-console.log(myFunc('ne Yury'))
+console.log(myFunc2('Yury'))
+console.log(myFunc2('ne Yury'))
+
+/** ЗАДАЧА 9 - Стрелочная функция
+ *
+ * 1. Объявите переменную и присвойте ей стрелочную функцию
+ *
+ * 2. У функции не должно быть параметров
+ *
+ * 3. Явно верните из функции строку "Привет, мир!"
+ *
+ * 4. Вызовите функцию и выведите результат в консоль
+ *
+ * 5. Перепишите функцию так, чтобы результат возвращался неявно
+ */
+
+
+const arrowFunc1 = () => {
+    return 'Привет, мир!'
+}
+
+
+const arrowFunc2 = () =>"Привет, мир!"
+
+console.log(arrowFunc1())
+console.log(arrowFunc2())
+
+/** ЗАДАЧА 10 - Комментарий перед функцией
+ *
+ * 1. Объявите функцию с двумя параметрами, значения которых - числа
+ *
+ * 2. Эта функция должна возвращать разницу между первым и вторым параметром
+ *
+ * 3. Добавьте многострочный комментарий перед функцией:
+ *  - Текст комментария "Возвращает разницу двух чисел"
+ *  - Укажите тип параметров - number
+ *  - Укажите тип возвращаемого значения - number
+ *  - Опишите возвращаемое значение - "Разница чисел"
+ *
+ * 4. Вызовите функцию
+ */
+
+/**
+ * Возвращает разницу двух чисел
+ * @param {number} a 
+ * @param {number} b 
+ * @returns {number} Разница чисел
+ */
+
+function difference(a, b) {
+    return a - b
+}
+
+console.log(difference(3,1))
+
+/** ЗАДАЧА 11 - Колбэк функция
+ *
+ * 1. Выведите в консоль "Привет, мир!" с задержкой 5 секунд
+ *
+ * 2. Используйте стрелочную функцию
+ */
+
+setTimeout(() => console.log("Привет, мир!"), 5000)
+
+/** ЗАДАЧА 12 - Создание объекта
+ *
+ * 1. Создайте объект с тремя свойствами:
+ *  - name
+ *  - surname
+ *  - favoriteNumber
+ *
+ * 2. Выведите в консоль строку
+ * "My name is <name> <surname> and my favorite number is <favoriteNumber>"
+ */
+
+const myObj = {
+    name : 'Yury',
+    surname : 'Skosyrev',
+    favoriteNumber : 7
+}
+
+console.log(`My name is ${myObj.name} ${myObj.surname} and my favorite number is ${myObj.favoriteNumber}`)
+
+/** ЗАДАЧА 13 - Длина строки
+ *
+ * 1. Создайте переменную и присвойте ей любую строку
+ *
+ * 2. Виведите в консоль длину этой строки
+ */
+
+const myString = 'Hey man!'
+console.log(myString.length)
+
+/** ЗАДАЧА 14 - Строка заглавными буквами
+ *
+ * 1. Создайте переменную и присвойте ей любую строку
+ *
+ * 2. Убедитесь что значение этой переменной НЕ является экземпляром String
+ * Используйте для этого оператор "instanceof"
+ *
+ * 3. Убедитесь что значение этой переменной имеет тип "string"
+ *
+ * 4. Создайте другую переменную и ее значением должно быть значение
+ * первой переменной заглавными буквами
+ *
+ * 5. Выведите в консоль значение второй переменной
+ */
+
+const myString2 = "lowercase string"
+console.log(myString2 instanceof String)
+console.log(typeof myString2)
+
+const upperCaseString = myString2.toUpperCase()
+
+console.log(upperCaseString)
